@@ -34,7 +34,10 @@ export class WebsocketGateway
     console.log(data);
     //conexiones a base de datos
     //logica que podemos implementar
+    //this.server.emit('mensaje','mensaje recibido por el servidor, me co## a tu mama');
+    this.server.to(client.id).emit("mensaje", 'mensaje recibido por el servidor');
     this.server.emit('mensaje', data);
+    
     // console.log(client.id);
     // client.broadcast.emit('mensaje', data);
   }
