@@ -18,8 +18,9 @@ import { Server, Socket } from 'socket.io';
 export class WebsocketGateway
   implements OnGatewayConnection, OnGatewayDisconnect
 {
+  
   @WebSocketServer()
-  server: Server;
+                    server: Server;
 
   handleConnection(client: Socket) {
     console.log('New client connected', client.id);
